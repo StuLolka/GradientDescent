@@ -50,7 +50,7 @@ for i in range(N):
     v_3 = gamma * v_3 + (1 - gamma) * eta * df(xx_3 - gamma * v_3)
     xx_3 -= v_3
 
-    redraw_function(ax, i, np.min([xx_1, xx_2]), np.max([xx_1, xx_2]))
+    redraw_function(ax, i, np.min([xx_1, xx_2, xx_3]), np.max([xx_1, xx_2, xx_3]))
     draw(ax, xx_1, 'red', 'Simple')
     draw(ax, xx_2, 'orange', 'Momentum')
     draw(ax, xx_3, 'green', 'Nesterov momentum')
